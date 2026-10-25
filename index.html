@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore parks and green spaces in Islamabad and Rawalpindi.">
+<title>GreenMap Pakistan | Parks & Green Spaces</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="styles.css"></head><body>
+<header class="site-header"><div class="brand-mark">🌿</div><div><p class="eyebrow">API-BASED WEB GIS APPLICATION</p><h1>GreenMap Pakistan</h1><p class="subtitle">Explore parks and green spaces in Islamabad & Rawalpindi</p></div></header>
+<main class="page-wrap">
+<section class="intro-card"><div><h2>Discover nearby green spaces</h2><p>Explore mapped parks, gardens, playgrounds and other green areas using OpenStreetMap data.</p></div><div class="stat-pill"><span class="leaf-dot"></span><span id="result-count">Preparing map…</span></div></section>
+<section class="control-panel" aria-label="Map controls">
+<div class="control"><label for="search-input">Search by name</label><input id="search-input" type="search" placeholder="e.g., Fatima Jinnah Park" autocomplete="off"></div>
+<div class="control"><label for="type-filter">Green-space type</label><select id="type-filter"><option value="all">All types</option><option value="park">Parks</option><option value="garden">Gardens</option><option value="playground">Playgrounds</option><option value="recreation_ground">Recreation grounds</option><option value="nature_reserve">Nature reserves</option><option value="other">Other green spaces</option></select></div>
+<div class="control"><label for="area-filter">Study area</label><select id="area-filter"><option value="both">Islamabad & Rawalpindi</option><option value="islamabad">Islamabad</option><option value="rawalpindi">Rawalpindi</option></select></div>
+<button id="reset-button" class="reset-button" type="button">Reset filters</button></section>
+<section class="map-section"><div class="map-heading"><div><h2>Interactive green-space map</h2><p>Select a marker to view available feature information.</p></div><span class="live-label"><span></span> API-powered data</span></div><div id="map" role="application" aria-label="Interactive map of parks and green spaces"></div><div id="status-message" class="status-message" role="status">Loading parks and green spaces from the Overpass API…</div></section>
+<section class="info-grid"><article class="info-card"><span class="info-icon">🗺️</span><h3>Explore the map</h3><p>Zoom and pan to explore different parts of the study area.</p></article><article class="info-card"><span class="info-icon">🔎</span><h3>Search and filter</h3><p>Find a green space by name or narrow results by type and study area.</p></article><article class="info-card"><span class="info-icon">📍</span><h3>Feature details</h3><p>Click a marker to view its name, category and available attributes.</p></article></section>
+<footer><p>Data © OpenStreetMap contributors · Map tiles © OpenStreetMap</p><p>For educational use. Feature coverage and attributes depend on OpenStreetMap data availability.</p></footer>
+</main><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="app.js"></script></body></html>
